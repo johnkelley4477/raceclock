@@ -1,0 +1,19 @@
+{
+  "name": "raceclock",
+  "version": "1.0.0",
+  "description": "This is a simple race clock to record times.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/johnkelley4477/raceclock.git"
+  },
+  "author": "John Kelley",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/johnkelley4477/raceclock/issues"
+  },
+  "homepage": "https://github.com/johnkelley4477/raceclock#readme"
+}
