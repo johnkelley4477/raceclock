@@ -2,7 +2,12 @@ span.clock {
     color: #f00;
     font-size: 225pt;
     display: block;
-    text-align: center;
+    position: fixed;
+    top: 0px;
+    background-color: rgba(0,0,0,0.5);
+}
+form{
+	margin-top: 350px;
 }
 input[type="button"], input[type="submit"] {
     border: none;
@@ -32,6 +37,11 @@ html.gr__localhost {
 #report:disabled {
     background: #500;
     color:#555;
+}
+h1 {
+    color: #fff;
+    text-align: center;
+    font-size: 40pt;
 }
 tbody.record, th {
     color: #fff;

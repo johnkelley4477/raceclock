@@ -4,7 +4,7 @@ function addRecord(time,cnt){
 	const row =`<tr>
 			<td><input type="text" name="place${cnt}" class="time" value="${cnt}" disabled></td>
 			<td><input type="text" name="time${cnt}" class="time" value="${time}" disabled></td>
-			<td><input type="text" name="bib${cnt}"></td>
+			<td><input type="text" name="bib${cnt}" class="bib focus"></td>
 		</tr>`
 	return row;
 }
@@ -56,7 +56,9 @@ $(window).keypress(function (e) {
   if (e.keyCode === 0 || e.keyCode === 32) {
     e.preventDefault();
     let time = $(".clock").html();
+    $('.bib').removeClass("focus");
     $('.record').append(addRecord(time,count));
+    $('.focus').focus();
     count++;
   }
 })
