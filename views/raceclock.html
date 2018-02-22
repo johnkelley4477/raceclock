@@ -1,0 +1,22 @@
+<link rel="stylesheet" type="text/css" href="/css/raceclock.css">
+<span class="clock"></span>
+<form method='POST' action="/raceclock/report">
+	<table>
+		<thead>
+			<tr>
+				<th>Place</th>
+				<th>Time</th>
+				<th>Bib</th>
+			</tr>
+		</thead>
+		<tbody class="record">
+
+		</tbody>
+	</table>
+	<input type="submit" value="Save" id="report" disabled>
+</form>
+<div class="buttons">
+	<input type="button" value="Start" id="start"/>
+	<input type="button" value="Stop" id="stop" disabled/>
+</div>
+<script type="text/javascript" src="/js/raceclock.js"></script>

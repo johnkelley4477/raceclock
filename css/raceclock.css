@@ -1,0 +1,55 @@
+span.clock {
+    color: #f00;
+    font-size: 225pt;
+    display: block;
+    text-align: center;
+}
+input[type="button"], input[type="submit"] {
+    border: none;
+    font-size: 20pt;
+    background-color: #00f;
+    padding: 10px;
+    color: #fff;
+}
+input[type="button"]:disabled {
+	background-color: #005;
+	color:#555;
+}
+html.gr__localhost {
+    margin: 0px;
+    background-color: #000;
+}
+.buttons{
+	position: fixed;
+	bottom: 0px;
+}
+#report {
+    position: fixed;
+    bottom: 0px;
+    right: 0px;
+    background: #f00;
+}
+#report:disabled {
+    background: #500;
+    color:#555;
+}
+tbody.record, th {
+    color: #fff;
+    font-size: 25pt;
+    width: 600px;
+    text-align: center;
+    margin: auto;
+}
+tbody.record input{
+	background-color: #000;
+	color: #fff;
+	font-size: 25pt;
+	border: none;
+	text-align: center;
+}
+tbody.record input:focus{
+	background-color: #fff;
+	color: #000;
+	font-size: 25pt;
+	border: none;
+}
