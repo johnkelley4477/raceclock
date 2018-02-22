@@ -29,9 +29,13 @@ function renderClock(){
         	min = 0;
         	hour++;
         }
-        $('.clock').text(`${hour}:${min}:${sec}.${mil}`);
+        $('.clock').text(`${hour}:${pad(min,2)}:${pad(sec,2)}.${pad(mil,3)}`);
         
     },1);
+}
+function pad (str, max) {
+  str = str.toString();
+  return str.length < max ? pad("0" + str, max) : str;
 }
 // Start
 $('#start').on('click',()=>{
