@@ -1,5 +1,10 @@
 let IntervalId = "";
 let count = 1;
+let paused = false;
+let mil;
+let sec;
+let min;
+let hour;
 function addRecord(time,cnt){
 	const row =`<tr>
 			<td><input type="text" name="place${cnt}" class="time" value="${cnt}" disabled></td>
@@ -9,12 +14,13 @@ function addRecord(time,cnt){
 	return row;
 }
 function renderClock(){
-	let mil = 1;
-    let sec = 0;
-    let min = 0;
-    let hour = 0;
-    $('.clock').text(`${hour}:${min}:${sec}.${mil}`);
-    
+    if(!paused){
+    	mil = 1;
+    	sec = 0;
+    	min = 0;
+    	hour = 0;
+    	$('.clock').text(`${hour}:${min}:${sec}.${mil}`);
+    }
     IntervalId = setInterval(()=>{
         mil++;
         if (mil > 999){
@@ -40,16 +46,28 @@ function pad (str, max) {
 // Start
 $('#start').on('click',()=>{
 	renderClock();
+	paused = false;
 	$('#start').prop('disabled', true);
 	$('#stop').prop('disabled', false);
+	$('#pause').prop('disabled', false);
 	$('#report').prop('disabled', true);
 });
 
 $('#stop').on('click',()=>{
 	clearInterval(IntervalId);
 	$('#start').prop('disabled', false);
+	$('#pause').prop('disabled', true);
 	$('#stop').prop('disabled', true);
 	$('#report').prop('disabled', false);
+});
+
+$('#pause').on('click',()=>{
+	clearInterval(IntervalId);
+	paused = true;
+	$('#start').prop('disabled', false);
+	$('#pause').prop('disabled', true);
+	$('#stop').prop('disabled', true);
+	$('#report').prop('disabled', true);
 });
 
 $("#report").on('click',()=>{
